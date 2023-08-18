@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <button id="button_1">
+        x
+    </button>
+
+    <button id="button_2">
+        y
+    </button>
+
+    <button id="button_3">
+        x y
+    </button>
+</body>
+<style type="text/css">
+button {
+    width: 300px;
+    height: 200px;
+    color: white;
+    background-color: blue;
+    transition: transform 2s;
+}
+
+#button_1:hover {
+    transform: translateX(100px);
+}
+
+#button_2:hover {
+    transform: translateY(100px);
+}
+
+#button_3:hover {
+    transform: translate(100px, 150px);
+}
+</style>
+</html>
