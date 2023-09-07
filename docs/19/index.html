@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <a id="link_1" href="#">
+        Hello
+    </a>
+    <a id="link_2" href="#">
+        world
+    </a>
+</body>
+<style type="text/css">
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+a {
+    border: 1px solid black;
+    padding: 40px 80px;
+    position: relative;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    background-color: tomato;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+a:before, a:after {
+    color: white;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(270deg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#link_1:before {
+    content: 'Hello';
+    background-color: green;
+    transform-origin: top;
+}
+
+#link_1:after {
+    content: 'Hello';
+    background-color: blue;
+    transform-origin: top;
+    transition-delay: 0.25s;
+}
+
+a:hover:before, a:hover:after {
+    transform: rotateX(0deg);
+}
+
+
+#link_2:before {
+    content: 'world';
+    background-color: green;
+    transform-origin: top;
+}
+
+#link_2:after {
+    content: 'world';
+    background-color: blue;
+    transform-origin: bottom;
+    transition-delay: 0.25s;
+}
+</style>
+</html>
