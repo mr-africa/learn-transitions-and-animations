@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <a href="#">
+        Hello
+    </a>
+</body>
+<style type="text/css">
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: black;
+    position: relative;
+}
+
+a:before,
+a:after {
+    content: '';
+    position: absolute;
+    transition: all 0.8s cubic-bezier(0.68, -0.5, 0.265, 1.55);
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    transform: skewX(30deg);
+}
+
+a:before {
+    left: -1%;
+    top: -5%;
+    background-color: lightcyan;
+}
+
+a:after {
+    left: 51%;
+    top: 5%;
+    background-color: tomato;
+}
+
+a:hover:before,
+a:hover:after {
+    transform: skewX(0);
+    top: 0;
+}
+
+a:hover:before {
+    left: 51%;
+}
+
+a:hover:after {
+    left: 0;
+}
+
+</style>
+</html>
