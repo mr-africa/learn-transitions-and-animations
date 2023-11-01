@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <img class="container__image" src="../resources/cat.jpeg">
+        <div class="description">
+            <h1 class="description__header description-item">Amazing cat</h1>
+            <p class="description__text description-item">The most amazing cat in the world</p>
+            <a class="description__button description-item" href="#">Show more cats (no)...</a>
+        </div>
+    </div>
+</body>
+<style type="text/css">
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    transition: 0.5s;
+    background-color: #444;
+    overflow: hidden;
+}
+
+.container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    background-color: #ddd;
+    opacity: 0;
+}
+
+.container:hover:before {
+    opacity: 0.6;
+}
+
+.container__image {
+    width: 100%;
+    height: 100%;
+}
+
+.description {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.description-item {
+    transition: all 0.3s;
+}
+
+.container:hover .description-item {
+    transition-delay: 0.2s;
+}
+
+.description__header {
+    background: black;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.description__text {
+    padding: 10px;
+}
+
+.description__header,
+.description__text {
+    opacity: 0;
+    transform: scale(10);
+}
+
+.container:hover .description__header,
+.container:hover .description__text {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.description__button {
+    background: black;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    transform: translateY(300px);
+}
+
+.container:hover .description__button {
+    transform: translateY(0);
+}
+</style>
+</html>
