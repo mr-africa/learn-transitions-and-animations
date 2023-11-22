@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <ul class="menu">
+        <li class="menu__item">
+            <a href="#"  class="menu__item-link">home</a>
+        </li>
+        <li class="menu__item">
+            <a href="#"  class="menu__item-link">service</a>
+        </li>
+        <li class="menu__item">
+            <a href="#"  class="menu__item-link">about</a>
+        </li>
+    </ul>
+</body>
+<style type="text/css">
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #006266;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__item {
+    list-style: none;
+    width: 100px;
+    text-align: center;
+}
+
+.menu__item-link {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.menu:hover .menu__item-link {
+    filter: blur(5px);
+    opacity: 0.4;
+}
+
+.menu .menu__item-link:hover {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.menu__item-link:before {
+    content: "";
+    position: absolute;
+    background-color: #EE5A24;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+    transform: scale(0);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.menu__item-link:hover:before {
+    transform: scale(1);
+}
+</style>
+</html>
