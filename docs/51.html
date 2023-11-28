@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <ul class="menu">
+        <li class="menu__item">
+            <a href="#" class="menu__item-link">
+                home
+                <span class="menu__item-link-border menu__item-link-border--1"></span>
+                <span class="menu__item-link-border menu__item-link-border--2"></span>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__item-link">
+                service
+                <span class="menu__item-link-border menu__item-link-border--1"></span>
+                <span class="menu__item-link-border menu__item-link-border--2"></span>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__item-link">
+                about
+                <span class="menu__item-link-border menu__item-link-border--1"></span>
+                <span class="menu__item-link-border menu__item-link-border--2"></span>
+            </a>
+        </li>
+    </ul>
+</body>
+<style type="text/css">
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #333;
+}
+.menu {
+    display: flex;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__item {
+    position: relative;
+    list-style: none;
+    width: 100px;
+    text-align: center;
+}
+
+.menu__item-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.5s;
+    padding: 5px;
+    display: block;
+}
+
+.menu__item-link-border:before,
+.menu__item-link-border:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    transition: all 0.2s;
+    opacity: 0;
+    background-color: transparent;
+}
+
+.menu__item-link-border--1:before {
+    left: 0;
+    top: 0;
+    border-top: 2px solid #ff0;
+    border-left: 2px solid #ff0;
+}
+
+.menu__item-link-border--1:after {
+    left: 0;
+    bottom: 0;
+    border-bottom: 2px solid #ff0;
+    border-left: 2px solid #ff0;
+}
+
+.menu__item-link-border--2:before {
+    right: 0;
+    top: 0;
+    border-top: 2px solid #ff0;
+    border-right: 2px solid #ff0;
+}
+
+.menu__item-link-border--2:after {
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid #ff0;
+    border-right: 2px solid #ff0;
+}
+
+.menu__item-link:hover {
+    color: #ff0;
+}
+.menu__item-link:hover .menu__item-link-border:before,
+.menu__item-link:hover .menu__item-link-border:after {
+    opacity: 1;
+}
+
+.menu__item-link:hover .menu__item-link-border--1:before {
+    transform: translateX(-10px) translateY(-10px);
+}
+.menu__item-link:hover .menu__item-link-border--1:after {
+    transform: translateX(-10px) translateY(10px);
+}
+.menu__item-link:hover .menu__item-link-border--2:before {
+    transform: translateX(10px) translateY(-10px);
+}
+.menu__item-link:hover .menu__item-link-border--2:after {
+    transform: translateX(10px) translateY(10px);
+}
+</style>
+</html>
