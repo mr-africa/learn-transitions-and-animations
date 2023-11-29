@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <ul class="menu">
+        <li class="menu__item">
+            <a href="#" class="menu__item-link" data-text="home">
+                home
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__item-link" data-text="service">
+                service
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__item-link" data-text="about">
+                about
+            </a>
+        </li>
+    </ul>
+</body>
+<style type="text/css">
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #333;
+}
+.menu {
+    display: flex;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu__item {
+    position: relative;
+    list-style: none;
+    width: 100px;
+    text-align: center;
+}
+
+.menu__item-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 56px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.5s;
+    padding: 5px;
+    display: block;
+    color: #333;
+    -webkit-text-stroke: 1px white;
+}
+
+.menu__item-link:before,
+.menu__item-link:after {
+    content: attr(data-text);
+    position: absolute;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.menu__item-link:hover:before {
+    opacity: 1;
+    -webkit-text-stroke: 1px black;
+    color: red;
+    transform: translate(20px, -20px);
+    z-index: 1;
+
+}
+.menu__item-link:hover:after {
+    opacity: 1;
+    -webkit-text-stroke: 1px black;
+    color: blue;
+    transform: translate(40px, -40px);
+    z-index: 2;
+}
+
+.menu__item-link:hover {
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+</style>
+</html>
