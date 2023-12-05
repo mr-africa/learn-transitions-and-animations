@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <ul class="menu">
+        <li class="menu__item">
+            <a href="#" class="menu__item-link" data-text="&nbsp;home">
+                &nbsp;home&nbsp;
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__item-link" data-text="&nbsp;service">
+                &nbsp;service&nbsp;
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__item-link" data-text="&nbsp;about">
+                &nbsp;about&nbsp;
+            </a>
+        </li>
+    </ul>
+</body>
+<style type="text/css">
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #252839;
+    box-sizing: border-box;
+}
+.menu {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    position: relative;
+}
+
+.menu__item {
+    position: relative;
+    list-style: none;
+}
+
+.menu__item-link {
+    position: relative;
+    font-size: 56px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: transparent;
+    line-height: 1em;
+    -webkit-text-stroke: 1px white;
+}
+
+.menu__item-link:before {
+    content: attr(data-text);
+    position: absolute;
+    transition: all 1s;
+    color: #00ade1;
+    border-right: 2px solid #00ade1;
+    -webkit-text-stroke: 1px #00ade1;
+    width: 0%;
+    overflow: hidden;
+}
+
+.menu__item-link:hover:before {
+    width: 100%;
+}
+
+</style>
+</html>
