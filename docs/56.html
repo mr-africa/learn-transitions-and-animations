@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <ul class="menu">
+        <li class="menu__item">
+            <a href="#" class="menu__item-link" data-text="home">
+                home
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__item-link" data-text="service">
+                service
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__item-link" data-text="about">
+                about
+            </a>
+        </li>
+    </ul>
+</body>
+<style type="text/css">
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #252839;
+    box-sizing: border-box;
+}
+.menu {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__item {
+    position: relative;
+    list-style: none;
+}
+
+.menu__item-link {
+    position: relative;
+    font-size: 56px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1em;
+    color: #fff;
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+
+.menu__item-link:hover {
+    color: rgba(255, 255, 255, 0.1);
+    transition-delay: 0s;
+}
+
+.menu__item-link:before {
+    content: attr(data-text);
+    position: absolute;
+    transition: all 1s;
+    color: #3bffa7;
+    transition-delay: 0s;
+    letter-spacing: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(40%);
+    text-shadow: 0 0 10px #3bffa8, 0 0 20px #3bffa8, 0 0 40px #3bffa8, 0 0 80px #3bffa8;
+    opacity: 0;
+}
+
+.menu__item-link:hover:before {
+    transition-delay: 0.5s;
+    letter-spacing: 10px;
+    opacity: 1;
+}
+
+</style>
+</html>
