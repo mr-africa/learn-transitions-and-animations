@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="card">
+        <img class="card__image" src="./resources/transparent_cat.png">
+        <div class="card__content">
+            <h2 class="card__content-header">Mew</h2>
+            <p class="card__content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+</body>
+<style type="text/css">
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 420px;
+    height: 300px;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #d41e31, #431f8f);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__image {
+    position: absolute;
+    height: 400px;
+    transform: translateX(-50%);
+    z-index: 1;
+    left: 50%;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.card:hover .card__content {
+    opacity: 1;
+    transform: translateX(-60%);
+}
+
+
+.card:hover .card__image {
+    height: 500px;
+    transform: translateX(-40%);
+}
+
+.card__content {
+    position: relative;
+    color: #fff;
+    transition-delay: 0.2s;
+    transition: 0.5s;
+    opacity: 0;
+    width: 200px;
+}
+
+.card__content-text{
+    font-weight: 500;
+    line-height: 30px;
+
+}
+</style>
+</html>
