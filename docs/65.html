@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <ul class="smoke-word">
+        <li class="smoke-word__letter">s</li>
+        <li class="smoke-word__letter">m</li>
+        <li class="smoke-word__letter">o</li>
+        <li class="smoke-word__letter">k</li>
+        <li class="smoke-word__letter">e</li>
+    </ul>
+</body>
+<style type="text/css">
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #09161d;
+}
+
+.smoke-word {
+    margin: 0;
+    padding: 0;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.smoke-word__letter {
+    list-style: none;
+    transition: 2s;
+}
+
+.smoke-word:hover .smoke-word__letter {
+    transform: translate(200px, -200px) rotate(45deg);
+    opacity: 0;
+    filter: blur(25px);
+}
+
+.smoke-word__letter:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.smoke-word__letter:nth-child(3) {
+    transition-delay: 0.6s;
+}
+.smoke-word__letter:nth-child(4) {
+    transition-delay: 1s;
+}
+.smoke-word__letter:nth-child(5) {
+    transition-delay: 1.4s;
+}
+</style>
+</html>
