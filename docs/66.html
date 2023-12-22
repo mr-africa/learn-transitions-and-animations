@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <h1 class="header" data-text="hello">
+        hello
+    </h1>
+</body>
+<style type="text/css">
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 0;
+    margin: 0;
+    font-size: 120px;
+    color: #ccc;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.header:before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #262626;
+    transition: 0.5s;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header:hover:before {
+    width: 100%;
+}
+</style>
+</html>
