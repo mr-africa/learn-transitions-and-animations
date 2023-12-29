@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <ul class="container">
+        <li class="container-item">clo</li>
+        <li class="container-item container-item-second-part">
+            <span class="container-item__letter container-item__letter-s">s</span>
+            <span class="container-item__letter container-item__letter-e">e</span>
+        </li>
+    </ul>
+</body>
+<style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Just Another Hand";
+    overflow: hidden;
+    background: #9b59b6;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    font-size: 10em;
+    display: flex;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container-item {
+    list-style: none;
+    transition: 0.5s;
+}
+
+.container:hover .container-item {
+    transform: rotate(180deg);
+}
+
+.container-item-second-part {
+    transition-delay: 0.5s;
+}
+
+.container-item__letter {
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.container-item__s {
+    transition-delay: 2.5s;
+}
+
+.container:hover .container-item-second-part .container-item__letter-s {
+    transform: rotate(90deg);
+}
+
+.container-item__e {
+    transition-delay: 2s;
+}
+
+.container:hover .container-item-second-part .container-item__letter-e {
+    transform: rotate(180deg) translateY(-10px);
+}
+
+</style>
+</html>
