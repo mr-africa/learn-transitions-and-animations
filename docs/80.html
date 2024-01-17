@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <h1 class="header">
+        Comming <br>soon!
+    </h1>
+</body>
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: green;
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    color: white;
+    font-size: 90px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 10px 20px black;
+    text-transform: uppercase;
+    animation: textflow 2s infinite alternate linear;
+}
+
+@keyframes textflow {
+    from {
+        transform: rotate(5deg);
+    }
+    to {
+        transform: rotate(-5deg);
+    }
+}
+</style>
+</html>
