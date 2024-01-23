@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <a class="button" href="#">
+        hover me
+    </a>
+</body>
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+}
+.button {
+    height: 100px;
+    width: 200px;
+    display: block;
+    color: tomato;
+    font-size: 30px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border: 1px solid tomato;
+    text-decoration: none;
+    text-align: center;
+    line-height: 100px;
+}
+
+.button:hover {
+    background-color: tomato;
+    color: white;
+    animation: shake 0.2s linear 4;
+}
+
+@keyframes shake {
+    33% {
+        transform: rotate(10deg);
+    }
+    66% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+</style>
+</html>
