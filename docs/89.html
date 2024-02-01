@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <h1 class="header">
+        hello!
+    </h1>
+</body>
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+.header {
+    background: url(./resources/zigzag.jpg);
+    animation: heartbeat 2s linear infinite;
+    text-transform: uppercase;
+    color: transparent;
+    font-size: 200px;
+    background-clip: text;
+    animation: textbackground 20s linear infinite;
+}
+
+@keyframes textbackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -100% 100%;
+    }
+}
+
+</style>
+</html>
