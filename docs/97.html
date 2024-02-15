@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="bouncer">
+        <span class="bouncer__arm"></span>
+        <span class="bouncer__arm"></span>
+        <span class="bouncer__arm"></span>
+        <span class="bouncer__arm"></span>
+        <span class="bouncer__arm"></span>
+    </div>
+</body>
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272727;
+}
+
+.bouncer {
+    border-top: 20px solid white;
+    height: 300px;
+    width: 250px;
+    position: relative;
+    display: flex;
+    object-fit: ;
+}
+
+.bouncer__arm {
+    display: block;
+    position: relative;
+    height: 300px;
+    transform-origin: top;
+    width: 10px;
+    background-color: white;
+    margin: 0 20px;
+    top: -10px;
+}
+
+.bouncer__arm:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-40%);
+}
+
+.bouncer__arm:first-child {
+    animation: left-arm 2s linear infinite;
+}
+
+.bouncer__arm:last-child {
+    animation: right-arm 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes left-arm {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(60deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes right-arm {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-60deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+</style>
+</html>
