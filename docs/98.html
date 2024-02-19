@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="loader">
+        <span class="loader__item loader__item--red"></span>
+        <span class="loader__item loader__item--blue"></span>
+        <span class="loader__item loader__item--tomato"></span>
+        <span class="loader__item loader__item--green"></span>
+    </div>
+</body>
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272727;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    transform: rotate(45deg);
+    position: relative;
+    animation: preloader 1s linear infinite;
+}
+
+.loader__item {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    animation: preloader-rotating 1s linear infinite;
+}
+
+.loader__item--red {
+    background-color: red;
+    top: 0;
+    left: 0;
+}
+.loader__item--blue {
+    background-color: blue;
+    top: 0;
+    right: 0;
+}
+.loader__item--tomato {
+    background-color: tomato;
+    bottom: 0;
+    left: 0;
+}
+.loader__item--green {
+    background-color: green;
+    bottom: 0;
+    right: 0;
+}
+
+@keyframes preloader {
+    0% {
+        width: 100px;
+        height: 100px;
+    }
+
+    10% {
+        width: 100px;
+        height: 100px;
+    }
+
+    50% {
+        width: 150px;
+        height: 150px;
+    }
+
+    90% {
+        width: 100px;
+        height: 100px;
+    }
+
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+@keyframes preloader-rotating {
+    0% {
+        transform: rotate(0);
+    }
+
+    10% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+    }
+}
+</style>
+</html>
