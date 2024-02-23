@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="header" data-text="loading..">
+        loading..
+    </div>
+</body>
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+    background-color: #272727;
+}
+
+.header {
+    position: relative;
+    text-transform: uppercase;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+.header:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: tomato;
+    border-right: 4px solid tomato;
+    animation: preloader 5s linear infinite;
+}
+
+@keyframes preloader {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+</style>
+</html>
