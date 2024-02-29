@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="preloader">
+    </div>
+</body>
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.preloader {
+    background-color: #262626;
+    height: 3px;
+    width: 200px;
+    animation: loading 2s linear infinite alternate;
+}
+
+@keyframes loading {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    45% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    50% {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100% {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+</style>
+</html>
