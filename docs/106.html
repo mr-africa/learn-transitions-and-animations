@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="preloader">
+        <span class="preloader-item"></span>
+        <span class="preloader-item"></span>
+        <span class="preloader-item"></span>
+        <span class="preloader-item preloader-item--second-column"></span>
+        <span class="preloader-item preloader-item--second-column"></span>
+        <span class="preloader-item preloader-item--second-column"></span>
+        <span class="preloader-item preloader-item--third-column"></span>
+        <span class="preloader-item preloader-item--third-column"></span>
+        <span class="preloader-item preloader-item--third-column"></span>
+    </div>
+</body>
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+.preloader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.preloader-item {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    animation: loading 1s linear infinite;
+    transform-origin: top left;
+}
+
+.preloader-item--second-column {
+    animation-delay: 0.1s;
+}
+
+.preloader-item--third-column {
+    animation-delay: 0.2s;
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+</style>
+</html>
