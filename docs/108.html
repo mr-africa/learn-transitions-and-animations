@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="header">Moving background</div>
+    </div>
+</body>
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #333;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    position: absolute;
+    font-size: 45px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    color: white;
+    text-transform: uppercase;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+.box {
+    position: absolute;
+    bottom: -100px;
+    background-color: #f2f2f2;
+    animation: box-moving 10s ease-in-out infinite;
+}
+
+.box:nth-child(1) {
+    width: 75px;
+    height: 75px;
+    left: 7%;
+}
+
+.box:nth-child(2) {
+    width: 65px;
+    height: 65px;
+    left: 12%;
+    animation-delay: 7s;
+}
+
+.box:nth-child(3) {
+    width: 95px;
+    height: 95px;
+    left: 40%;
+    animation-delay: 14s;
+}
+
+.box:nth-child(4) {
+    width: 70px;
+    height: 70px;
+    left: 50%;
+    animation-delay: 12s;
+}
+
+.box:nth-child(5) {
+    width: 80px;
+    height: 80px;
+    left: 70%;
+    animation-delay: 8s;
+}
+
+.box:nth-child(6) {
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-delay: 16s;
+}
+
+.box:nth-child(7) {
+    width: 50px;
+    height: 50px;
+    left: 10%;
+    animation-delay: 4s;
+}
+
+.box:nth-child(8) {
+    width: 95px;
+    height: 95px;
+    left: 35%;
+    animation-delay: 20s;
+}
+
+.box:nth-child(9) {
+    width: 35px;
+    height: 35px;
+    left: 90%;
+    animation-delay: 5s;
+}
+
+.box:nth-child(10) {
+    width: 95px;
+    height: 95px;
+    left: 20%;
+    animation-delay: 17s;
+}
+
+@keyframes box-moving {
+    0% {
+        bottom: -100px;
+    }
+
+    100% {
+        bottom: 100%;
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+</style>
+</html>
