@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="loader">
+    </div>
+</body>
+<style type="text/css">
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #001d30;
+}
+
+.loader {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(0,29,48,1) 0%, rgba(81,238,238,1) 100%);
+    animation: loading 2s linear infinite;
+}
+
+.loader:before {
+    content: "";
+    position: absolute;
+    inset: 20px 20px 0 0;
+    border-radius: 50%;
+    background-color: #001d30;
+}
+
+.loader:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    bottom: -10px;
+    border-radius: 50%;
+    background-color: #51eeee;
+    box-shadow: 0 0 5px #51eeee,
+                0 0 25px #51eeee,
+                0 0 50px #51eeee,
+                0 0 75px #51eeee;
+}
+
+@keyframes loading {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+</style>
+</html>
