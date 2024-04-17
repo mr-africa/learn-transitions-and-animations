@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <a href="#" class="button">
+        Hover me
+        <span class="button__border button__border--top"></span>
+        <span class="button__border button__border--right"></span>
+        <span class="button__border button__border--bottom"></span>
+        <span class="button__border button__border--left"></span>
+    </a>
+</body>
+<style type="text/css">
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.button {
+    position: relative;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #262626;
+    letter-spacing: 8px;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+.button__border {
+    position: absolute;
+    background-color: #262626;
+}
+
+.button:hover .button__border {
+    transition: 0.2s;
+}
+
+.button__border--top,
+.button__border--bottom {
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+}
+
+.button__border--top {
+    transform-origin: left;
+    top: 0;
+    left: 0;
+}
+
+.button__border--bottom {
+    transform-origin: right;
+    bottom: 0;
+    right: 0;
+}
+
+.button:hover .button__border--top,
+.button:hover .button__border--bottom {
+    transform: scaleX(1);
+}
+
+.button__border--left,
+.button__border--right {
+    height: 100%;
+    width: 3px;
+    transform: scaleY(0);
+}
+
+.button__border--left {
+    transform-origin: bottom;
+    left: 0;
+    bottom: 0;
+}
+
+.button__border--right {
+    transform-origin: top;
+    top: 0;
+    right: 0;
+}
+
+.button:hover .button__border--left,
+.button:hover .button__border--right {
+    transform: scaleY(1);
+}
+.button:hover .button__border--left {
+    transition-delay: 0.6s;
+}
+
+.button:hover .button__border--right {
+    transition-delay: 0.2s;
+}
+
+.button:hover .button__border--bottom {
+    transition-delay: 0.4s;
+}
+.button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #262626;
+  transform: scale(0);
+  z-index: -1;
+  transform-origin: top left;
+}
+
+.button:hover:before {
+  transform: scale(1);
+  transition: 0.5s;
+  transition-delay: 0.8s;
+}
+
+.button:hover {
+  color: #fff;
+  transition: 0.2s;
+  transition-delay: 0.8s;
+}
+
+.button:after {
+  content: "\f303";
+  font-family: fontAwesome;
+  position: absolute;
+  top: -42px;
+  left: 0;
+  color: #262626;
+}
+
+.button:hover:after {
+  animation: draw 1s linear forwards;
+}
+
+@keyframes draw {
+  0% {
+    top: -42px;
+    left: 0;
+  }
+  20% {
+    top: -42px;
+    left: 100%;
+  }
+  40% {
+    top: calc(100% - 42px);
+    left: 100%;
+  }
+  60% {
+    top: calc(100% - 42px);
+    left: 0;
+  }
+  80% {
+    top: -42px;
+    left: 0;
+  }
+  100% {
+    top: calc(100% - 42px);
+    left: 100%;
+  }
+</style>
+</html>
