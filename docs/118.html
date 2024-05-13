@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <h1 class="header">Text fading effect</h1>
+</body>
+<style type="text/css">
+body {
+    background-color: #00e1ffaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: red;
+}
+
+.header {
+    text-transform: capitalize;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 120%;
+    background-color: red;
+    transform: translateX(100%);
+    animation: text-fade 10s linear infinite;
+}
+
+@keyframes text-fade {
+    0% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+</style>
+</html>
