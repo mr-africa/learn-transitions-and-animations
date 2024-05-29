@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="neon-box">
+      <div class="neon-box__lightbar"></div>
+      <div class="neon-box__toplayer"></div>
+      <h2 class="neon-box__header">Neon Text</h2>
+    </div>
+</body>
+<style type="text/css">
+body {
+    background-color: #00e1ffaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: red;
+    background: #061b31;
+    overflow: hidden;
+}
+
+.neon-box {
+  position: relative;
+  width: 600px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.neon-box__header {
+  color: #fff;
+  font-size: 5em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+    0 0 80px #00b3ff, 0 0 120px #00b3ff;
+}
+
+.neon-box__lightbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+    0 0 80px #00b3ff, 0 0 120px #00b3ff;
+  animation: lightbar 5s linear infinite;
+  z-index: 2;
+}
+
+@keyframes lightbar {
+  0% {
+    transform: scaleY(0) translateX(0);
+  }
+  10% {
+    transform: scaleY(1) translateX(0);
+  }
+  90% {
+    transform: scaleY(1) translateX(calc(600px - 10px));
+  }
+  100% {
+    transform: scaleY(0) translateX(calc(600px - 10px));
+  }
+}
+
+.neon-box__toplayer {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: #061b31;
+  animation: toplayer 10s linear infinite;
+}
+
+@keyframes toplayer {
+  5% {
+    transform: translateX(0);
+  }
+  45%,
+  50% {
+    transform: translateX(100%);
+  }
+  50.001%,
+  55% {
+    transform: translateX(-100%);
+  }
+  95% {
+    transform: translateX(0);
+  }
+}
+</style>
+</html>
