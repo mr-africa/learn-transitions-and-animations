@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-box">
+            <div class="loader-box__item" style="--i: 1"></div>
+            <div class="loader-box__item" style="--i: 2"></div>
+            <div class="loader-box__item" style="--i: 3"></div>
+            <div class="loader-box__item" style="--i: 4"></div>
+            <div class="loader-box__item" style="--i: 5"></div>
+            <div class="loader-box__item" style="--i: 6"></div>
+            <div class="loader-box__item" style="--i: 7"></div>
+            <div class="loader-box__item" style="--i: 8"></div>
+        </div>
+        <h2 class="loader__header">Loading...</h2>
+    </div>
+</body>
+<style type="text/css">
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.loader {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.loader__header {
+    font-size: 18px;
+}
+
+.loader-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.loader-box__item {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: rotate(calc(45deg * var(--i)));
+}
+
+.loader-box__item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: cyan;
+    border-radius: 50%;
+}
+
+.loader-box__item:nth-child(even):before {
+    background-color: darkcyan;
+    animation: loading 2s linear infinite;
+    transform-origin: 60px;
+}
+
+@keyframes loading {
+    0%, 25% {
+        transform: rotate(0) scale(1);
+    }
+
+    50% {
+        transform: rotate(90deg) scale(1.3);
+    }
+
+    75%, 100% {
+        transform: rotate(180deg) scale(1);
+    }
+}
+</style>
+</html>
