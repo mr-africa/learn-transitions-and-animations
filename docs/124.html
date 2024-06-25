@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="wave">
+        <h1 class="wave__item wave__item--top">WAVE</h1>
+        <h1 class="wave__item wave__item--bottom">WAVE</h1>
+    </div>
+</body>
+<style type="text/css">
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #2f2f2f;
+}
+
+.wave {
+    position: relative;
+    text-align: center;
+    vertical-align: center;
+    overflow: hidden;
+    font-weight: bold;
+    width: 500px;
+    height: 300px;
+}
+
+.wave__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 170px;
+}
+
+.wave__item--top {
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+}
+
+.wave__item--bottom {
+    color: #03a9f4;
+    animation: wave 2s ease-in-out infinite;
+}
+
+
+@keyframes wave {
+    0% {
+        clip-path: polygon(0% 34%, 9% 43%, 14% 59%, 22% 69%, 33% 58%, 41% 45%, 46% 29%, 63% 23%, 72% 31%, 77% 46%, 81% 57%, 90% 54%, 93% 38%, 99% 29%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0% 34%, 8% 19%, 19% 15%, 23% 26%, 33% 58%, 45% 48%, 61% 42%, 74% 49%, 71% 68%, 80% 72%, 83% 64%, 90% 54%, 94% 81%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    100% {
+        clip-path: polygon(0% 34%, 9% 43%, 14% 59%, 22% 69%, 33% 58%, 41% 45%, 46% 29%, 63% 23%, 72% 31%, 77% 46%, 81% 57%, 90% 54%, 93% 38%, 99% 29%, 100% 100%, 0% 100%);
+    }
+}
+</style>
+</html>
