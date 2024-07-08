@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="container__header container__header--black">black</h1>
+        <h1 class="container__header container__header--white">white</h1>
+    </div>
+</body>
+<style type="text/css">
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #c8e6d5;
+}
+
+.container {
+    position: relative;
+    width: 800px;
+}
+
+.container__header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    width: 100%;
+}
+
+.container__header--white {
+    color: white;
+    background-color: #c8e6d5;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+}
+
+.container__header--white:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.container__header--black:hover ~ .container__header--white {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+</style>
+</html>
