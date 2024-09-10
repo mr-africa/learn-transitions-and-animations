@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <h2 class="card__header">Cat Boris</h2>
+            <div class="card-image">
+                <img src="./resources/cat.jpeg" class="card-image__image">
+            </div>
+        </div>
+        <div class="card-toggle">
+            <span class="card-toggle__button"></span>
+        </div>
+    </div>
+</body>
+<style type="text/css">
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #222;
+    box-sizing: border-box;
+}
+
+.card {
+    position: relative;
+    background-color: tomato;
+    border-radius: 20px;
+    width: 400px;
+    height: 100px;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card--active {
+    height: 350px;
+}
+
+.card-content {
+    overflow: hidden;
+}
+
+.card__header {
+    color: white;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+.card-image {
+    width: 300px;
+    height: 200px;
+    border: 4px solid white;
+    position: relative;
+    z-index: 1;
+}
+
+.card-image__image {
+    width: 100%;
+    height: 100%;
+}
+
+.card-toggle {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    bottom: -60px;
+    left: 50%;
+    background-color: tomato;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.card-toggle:before, .card-toggle:after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    top: 0;
+}
+
+.card-toggle:before {
+    left: -50%;
+    box-shadow: 22px -22px tomato;
+}
+.card-toggle:after {
+    right: -50%;
+    box-shadow: -22px -22px tomato;
+}
+
+.card-toggle__button {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, 50%) rotate(-45deg);
+    transition: 1s;
+}
+
+.card-toggle__button--active {
+    transform: translate(-50%, 50%) rotate(135deg);
+}
+</style>
+<script type="text/javascript">
+const card = document.querySelector('.card')
+const cardToggle = document.querySelector('.card-toggle')
+const cardToggleButton = document.querySelector('.card-toggle__button')
+
+cardToggle.addEventListener('click', () => {
+    cardToggleButton.classList.toggle('card-toggle__button--active')
+    card.classList.toggle('card--active')
+})
+</script>
+</html>
