@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <h2 class="header">hello moto</h2>
+</body>
+<style type="text/css">
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #222;
+    box-sizing: border-box;
+}
+
+.header {
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    cursor: default;
+}
+
+.header-letter {
+    animation: letter-animation 1s linear infinite;
+}
+
+@keyframes letter-animation {
+    0%, 20% {
+        color: #fff;
+    }
+    21%, 80% {
+        color: green;
+    }
+    81%, 100% {
+        color: #fff;
+    }
+}
+</style>
+<script type="text/javascript">
+    const header = document.querySelector('.header');
+
+    const spans = header.innerText.split('').map((letter, index) => `<span class="header-letter" style="animation-duration: ${Math.random() * 5}s; filter: hue-rotate(${Math.random() * 100 }deg)">${letter}</span>`).join('');
+
+    header.innerHTML = spans
+</script>
+</html>
