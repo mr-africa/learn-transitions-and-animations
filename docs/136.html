@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <section class="section section--1 section--show-animation">
+        <h2 class="section__header">Scroll me</h2>
+    </section>
+    <section class="section section--2">
+        <h2 class="section__header">Hello</h2>
+    </section>
+    <section class="section section--3">
+        <h2 class="section__header">How are you doing</h2>
+    </section>
+    <section class="section section--4">
+        <h2 class="section__header">Do you like cats</h2>
+    </section>
+</body>
+<style type="text/css">
+body {
+    height: 200vh;
+    box-sizing: border-box;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    font-size: 4em;
+}
+
+.section--1 {
+    background-color: #ccc;
+}
+
+.section--2 {
+    background-color: tomato;
+}
+
+.section--3 {
+    background-color: darkcyan;
+}
+
+.section--4 {
+    background-color: black;
+}
+
+.section__header {
+    transition: 1s;
+    opacity: 0;
+}
+
+.section--show-animation .section__header {
+    opacity: 1;
+}
+</style>
+<script type="text/javascript">
+const sections = document.querySelectorAll('.section')
+
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        const scrollDistance = window.scrollY
+        const secDistance = section.offsetTop
+
+        if (scrollDistance >= secDistance - 150) {
+            section.classList.add('section--show-animation')
+        }
+    })
+})
+</script>
+</html>
