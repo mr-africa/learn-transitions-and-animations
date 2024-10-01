@@ -71,6 +71,8 @@ window.addEventListener('scroll', () => {
 
         if (scrollDistance >= secDistance - 150) {
             section.classList.add('section--show-animation')
+        } else {
+            section.classList.remove('section--show-animation')
         }
     })
 })
