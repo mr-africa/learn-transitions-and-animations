@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div class="toggle">+</div>
+        <ul class="menu">
+            <li class="menu__item" style="--i: 1">
+                <a class="menu__item--link" href="#">1</a>
+            </li>
+            <li class="menu__item" style="--i: 2">
+                <a class="menu__item--link" href="#">2</a>
+            </li>
+            <li class="menu__item" style="--i: 3">
+                <a class="menu__item--link" href="#">3</a>
+            </li>
+            <li class="menu__item" style="--i: 4">
+                <a class="menu__item--link" href="#">4</a>
+            </li>
+            <li class="menu__item" style="--i: 5">
+                <a class="menu__item--link" href="#">5</a>
+            </li>
+            <li class="menu__item" style="--i: 6">
+                <a class="menu__item--link" href="#">6</a>
+            </li>
+        </ul>
+    </div>
+</body>
+<style type="text/css">
+body {
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.toggle {
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 20;
+    transition: 0.3s;
+}
+
+
+.container--active .toggle {
+    transform: rotate(45deg);
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__item {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transform: rotate(calc(360deg / 6 * var(--i)));
+}
+
+.menu__item--link {
+    text-decoration: none;
+    width: 55px;
+    height: 55px;
+    color: #222;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: visible;
+    transition: 0.3s;
+}
+
+.container--active .menu__item--link {
+    top: 0;
+    transform: translate(-50%, -50%) rotate(calc(360deg / 6 * var(--i))) ;
+}
+</style>
+<script type="text/javascript">
+const container = document.querySelector('.container')
+const toggle = document.querySelector('.toggle')
+
+toggle.addEventListener('click', () => {
+    container.classList.toggle('container--active')
+})
+</script>
+</html>
