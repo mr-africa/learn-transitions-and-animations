@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div class="skewed"></div>
+    </div>
+</body>
+<style type="text/css">
+body {
+    box-sizing: border-box;
+    height: 200vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(resources/manhattan-downtown-architecture-night-view.jpg);
+    background-size: cover;
+}
+
+.skewed {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    transform: skewY(-10deg);
+    transform-origin: top left;
+    bottom: -100%;
+    left: 0;
+}
+
+</style>
+<script type="text/javascript">
+const skewed = document.querySelector('.skewed')
+
+window.addEventListener('scroll', () => {
+    const scrollDistance = -10 + window.scrollY / 60
+    skewed.style.transform = `skewY(${scrollDistance}deg)`
+})
+</script>
+</html>
