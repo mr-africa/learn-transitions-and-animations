@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div class="content">
+        <section class="block block">
+            <h2 class="header header--cat">CAT</h2>
+        </section>
+        <section class="block block">
+            <h2 class="header header--fox">FOX</h2>
+        </section>
+        <section class="block block">
+            <h2 class="header header--city">City</h2>
+        </section>
+    </div>
+</body>
+<style type="text/css">
+body {
+    box-sizing: border-box;
+}
+.block {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.header {
+    font-size: 300px;
+    letter-spacing: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-attachment: fixed;
+    text-align: center;
+    margin-right: -50px;
+}
+
+.header--cat {
+    background-image: url(resources/cat.jpeg);
+}
+.header--fox {
+    background-image: url(resources/fox.jpeg);
+}
+.header--city {
+    background-image: url(resources/manhattan-downtown-architecture-night-view.jpg);
+}
+</style>
+</html>
